@@ -6,16 +6,22 @@ while not terminate:
     number2 = int(number2)
 
     while True:
-        operation = input("Please enter add/sub or  quite to exit: ")
+        operation = input("Please enter add/sub/def/mul or  quite to exit: ")
         if operation == "quite":
             terminate = True
             break
-        if operation not in ["add", "sub"]:
-            print("Unknown operation!")
+        if operation not in ["add", "sub", "mul", "def"]:
+            print("Unknown command!")
             continue
         if operation == "add":
             print("Result is", number1 + number2)
             break
         if operation == "sub":
             print("Result is", number1 - number2)
+            break
+        if operation == "def":
+            print("Result is", number1 / number2)
+            break
+        if operation == "mul":
+            print("Result is", number1 *  number2)
             break
